@@ -262,4 +262,3 @@ while True:
 if recording_writer:
     recording_writer.release()
 cap.release()
-# cv2.destroyAllWindows()
