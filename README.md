@@ -6,5 +6,6 @@
 <br>
 <p>Just one important thing: To run all the upcoming programs(based on OpenCV), you will need a Virtual Environment to your folder.</p><br><br>
 <p>So if you don't have one on your system, you can create it using the python documentation link given below.</p>
+<p>Docs - https://docs.python.org/3/library/venv.html</p>
 <p>Also don't forget to have OpenCV as well as NumPy on your system :).</p>
 <p>More programs dropping soon.</p>
