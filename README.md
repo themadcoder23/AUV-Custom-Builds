@@ -1,11 +1,41 @@
-<p>The Colour - shape combo detection using OpenCV library has been dropped!!!!</p><br>
-<p>Features:</p><br>
-<p>1) Detects a specific Colour - Shape combo based on the keyboard controls with a great accuracy. </p><br>
-<p>2) No need for GUI, making code lighter with minimal possibility of errors.</p><br>
-<p>3) Highly efficient code using less memory and operates with a great speed.</p><br>
-<br>
-<p>Just one important thing: To run all the upcoming programs(based on OpenCV), you will need a Virtual Environment to your folder.</p><br><br>
-<p>So if you don't have one on your system, you can create it using the python documentation link given below.</p>
-<p>Docs - https://docs.python.org/3/library/venv.html</p>
-<p>Also don't forget to have OpenCV as well as NumPy on your system :).</p>
-<p>More programs dropping soon.</p>
+# 🍊 Path Marker: Orange Object Alignment System
+
+This project implements a real-time object detection and alignment system using **OpenCV** and **Python**. It is designed to identify a dominant orange object in the camera feed, calculate its angle and position relative to the frame center, and generate navigational commands to move towards and align with the target.
+
+This system is ideal for autonomous vehicles (like ROVs or drones) or robotics projects requiring visual tracking and alignment.
+
+## ✨ Features
+
+* **Real-Time Processing:** Processes video frames from a camera stream (`cv2.VideoCapture(0)`).
+* **HSV Color Filtering:** Uses a defined **orange color range** to isolate the target object.
+* **Morphological Operations:** Applies **opening and closing** to reduce noise and close gaps in the mask.
+* **Contour Analysis:** Finds the largest contour and uses `cv2.minAreaRect` to calculate the object's **orientation (angle)** and **center point (offset)**.
+* **Navigational Command Generation:** Generates the following commands based on calculated error thresholds:
+    * `Yaw left`/`Yaw right`: To correct angular misalignment.
+    * `Left`/`Right`: To correct horizontal position offset.
+    * `Forward`: When both angular and positional errors are within acceptable thresholds for a sustained period.
+* **Alignment Logic:** Uses a frame counter (`frame_aligned` and `min_frames`) to ensure **stable alignment** before issuing the final `Forward` command and entering the fully `aligned` state.
+
+---
+
+## ⚙️ Requirements
+
+To run this code, you need Python and the following libraries:
+
+| Library | Command to Install |
+| :--- | :--- |
+| **OpenCV** (cv2) | `pip install opencv-python` |
+| **NumPy** (np) | `pip install numpy` |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone [https://github.com/themadcoder23/AUV-Custom-Builds.git](https://github.com/themadcoder23/AUV-Custom-Builds.git)
+cd AUV-Custom-Builds
+pip install opencv-python numpy
